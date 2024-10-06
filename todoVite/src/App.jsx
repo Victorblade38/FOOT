@@ -1,87 +1,62 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Todo from "./components/todo/todo";
+import Stopwatch from "./components/stopwatch/stopwatch";
+import Quote from "./components/quote/Quote";
 
 function App() {
-  const [color, setColor] = useState("blue");
-  const [todo, setTodo] = useState([]);
-
-  const bgColor = {
-    blue: "blue",
-    orange: "orange",
-    green: "green",
-    purple: "purple",
-  };
-
+  const [color, setColor] = useState("gray"); // Color state
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-700 col-span-2 row-span-2">
-      <div className="bg-white p-4 flex flex-col">
+    <div className="h-screen flex flex-col md:flex-row justify-center items-center bg-gray-700  gap-4 p-4 md:p-0">
+      <div className="flex flex-col items-center gap-4">
         <div
-          className={`col-span-2 row-span-2 bg-${color}-100 px-20 py-10 rounded-md flex flex-col gap-4 transition ease-in duration-300`}
+          className={`flex flex-row justify-between p-4 gap-2 bg-${color}-100 rounded-md font-sans`}
         >
-          <div className="flex flex-row justify-between p-2 gap-2">
-            <span
-              className={`bg-blue-100 px-3 py-2 rounded-md ${
-                color === "blue" ? "shadow-none" : "shadow-md"
-              } font-semibold
-            transition ease-in duration-300 cursor-pointer`}
-              onClick={() => setColor("blue")}
-            >
-              blue
-            </span>
-            <span
-              className={`bg-orange-100 px-3 py-2 rounded-md ${
-                color === "orange" ? "shadow-none" : "shadow-md"
-              } font-semibold transition ease-in duration-300 cursor-pointer`}
-              onClick={() => setColor("orange")}
-            >
-              orange
-            </span>
-            <span
-              className={`bg-green-100 px-3 py-2 rounded-md ${
-                color === "green" ? "shadow-none" : "shadow-md"
-              } font-semibold transition ease-in duration-300 cursor-pointer`}
-              onClick={() => setColor("green")}
-            >
-              green
-            </span>
-            <span
-              className={`bg-red-100 px-3 py-2 rounded-md ${
-                color === "red" ? "shadow-none" : "shadow-md"
-              } font-semibold transition ease-in duration-300 cursor-pointer`}
-              onClick={() => setColor("red")}
-            >
-              red
-            </span>
-          </div>
-          <div className="flex flex-row ">
-            <input
-              type="text"
-              className="col-span-2 px-8 py-3 rounded-s-md shadow-md focus:border-none focus:outline-none"
-              placeholder="enter your todo"
-            />
-            <button className="bg-red-500 px-4 text-white font-semibold rounded-e-md shadow-md">
-              submit
-            </button>
-          </div>
-          <ul className="flex flex-col items-center gap-2">
-            <li className="flex flex-row justify-between bg-gray-50 p-4 gap-2 w-full shadow-md rounded-md">
-              <p className="font-serif text-sm">Your to do goes here</p>
-              <input type="checkbox" />
-            </li>
-            <li className="flex flex-row justify-between bg-gray-50 p-4 gap-2 w-full shadow-md rounded-md">
-              <p className="font-serif text-sm">Your to do goes here</p>
-              <input type="checkbox" />
-            </li>
-            <li className="flex flex-row justify-between bg-gray-50 p-4 gap-2 w-full shadow-md rounded-md">
-              <p className="font-serif text-sm">Your to do goes here</p>
-              <input type="checkbox" />
-            </li>
-            <li className="flex flex-row justify-between bg-gray-50 p-4 gap-2 w-full shadow-md rounded-md">
-              <p className="font-serif text-sm">Your to do goes here</p>
-              <input type="checkbox" />
-            </li>
-          </ul>
+          <span
+            className={`bg-gray-100 px-3 py-2 rounded-md 
+            ${color !== "gray" ? "shadow-md " : "border-2 border-slate-800"}
+             transition ease-in duration-300 cursor-pointer`}
+            onClick={() => setColor("gray")}
+          >
+            light
+          </span>
+          <span
+            className={`bg-orange-100 px-3 py-2 rounded-md 
+            ${color !== "orange" ? "shadow-md " : "border-2 border-slate-800"}
+             transition ease-in duration-300 cursor-pointer`}
+            onClick={() => setColor("orange")}
+          >
+            orange
+          </span>
+          <span
+            className={`bg-red-100 px-3 py-2 rounded-md 
+            ${color !== "red" ? "shadow-md " : "border-2 border-slate-800"}
+             transition ease-in duration-300 cursor-pointer`}
+            onClick={() => setColor("red")}
+          >
+            red
+          </span>
+          <span
+            className={`bg-green-100 px-3 py-2 rounded-md 
+            ${color !== "green" ? "shadow-md " : "border-2 border-slate-800"}
+             transition ease-in duration-300 cursor-pointer`}
+            onClick={() => setColor("green")}
+          >
+            green
+          </span>
+          <span
+            className={`bg-blue-100 px-3 py-2 rounded-md 
+            ${color !== "blue" ? "shadow-md " : "border-2 border-slate-800"}
+             transition ease-in duration-300 cursor-pointer`}
+            onClick={() => setColor("blue")}
+          >
+            blue
+          </span>
         </div>
-        <div className=""></div>
+        <Quote color={color} />
+        <Stopwatch color={color} />
+      </div>
+      <div className="col-span-1 row-span-2">
+        <Todo color={color} />
       </div>
     </div>
   );
