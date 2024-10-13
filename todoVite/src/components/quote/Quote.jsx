@@ -4,7 +4,7 @@ const Quote = ({ color = "blue" }) => {
   const [quote, setQuote] = useState("");
 
   async function quoteData() {
-    const url = import.meta.env.VITE_QUOTE_API_KEY;
+    const url = "http://api.quotable.io/random";
     console.log(url);
     try {
       const response = await fetch(url);
