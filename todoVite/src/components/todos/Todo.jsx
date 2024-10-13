@@ -71,7 +71,7 @@ const Todo = ({ color = "blue" }) => {
             className="flex flex-row justify-between bg-gray-50 p-3 md:p-4 gap-2 w-full shadow-md rounded-md"
           >
             <p
-              className={`font-serif text:lg md:text-xl w-full ${
+              className={`font-serif text:lg md:text-lg w-full ${
                 todoItem.isCompleted ? "line-through text-slate-700" : ""
               }`}
             >
