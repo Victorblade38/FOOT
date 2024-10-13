@@ -4,10 +4,10 @@ const Quote = ({ color = "blue" }) => {
   const [quote, setQuote] = useState("");
 
   async function quoteData() {
-    const url = "https://api.quotable.io/random";
+    //const url = "https://api.quotable.io/random";
     //console.log(url);
     try {
-      const response = await fetch(url);
+      const response = await fetch("https://api.quotable.io/random");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
