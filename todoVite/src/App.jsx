@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Todo from "./components/todo/todo";
 import Stopwatch from "./components/stopwatch/stopwatch";
 import Quote from "./components/quote/Quote";
+import Todo from "./components/todos/Todo";
 
 function App() {
   const [color, setColor] = useState("gray"); // Color state
