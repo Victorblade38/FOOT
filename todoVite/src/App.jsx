@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Todo from "./components/todo/todo";
+import Todo from "./components/todo/Todo";
 import Stopwatch from "./components/stopwatch/stopwatch";
 import Quote from "./components/quote/Quote";
 
