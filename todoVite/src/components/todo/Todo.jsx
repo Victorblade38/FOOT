@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import img from "../../assets/dustbin.png";
 
-export default Todo = ({ color = "blue" }) => {
+const Todo = ({ color = "blue" }) => {
   const [todo, setTodo] = useState(""); // New to-do input
   const maxTodos = 6; // Set the maximum number of to-dos allowed
   const [todos, setTodos] = useState(() => {
@@ -93,3 +93,5 @@ export default Todo = ({ color = "blue" }) => {
     </div>
   );
 };
+
+export default Todo;
