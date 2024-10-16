@@ -7,7 +7,7 @@ const Quote = ({ color = "blue" }) => {
     //const url = "https://api.quotable.io/random";
     //console.log(url);
     try {
-      const response = await fetch("https://api.quotable.io/random");
+      const response = await fetch("http://api.quotable.io/random");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
