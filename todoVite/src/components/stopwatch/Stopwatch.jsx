@@ -56,19 +56,19 @@ const Stopwatch = ({ color = "blue" }) => {
         <div className="flex flex-row justify-around">
           {" "}
           <button
-            className="col-span-1 row-span-1 bg-red-500 text-white px-2 py-1 md:px-3 md:py-2 rounded-md shadow-md"
+            className="col-span-1 row-span-1 bg-blue-500 text-white px-2 py-1 md:px-3 md:py-2 rounded-md shadow-md"
             onClick={handleStart}
           >
             start
           </button>
           <button
-            className="col-span-1 row-span-1  bg-red-500 text-white px-2 py-1 md:px-3 md:py-2  rounded-md shadow-md"
+            className="col-span-1 row-span-1  bg-blue-500 text-white px-2 py-1 md:px-3 md:py-2  rounded-md shadow-md"
             onClick={handleStop}
           >
             stop
           </button>
           <button
-            className="col-span-1 row-span-1 bg-red-500 text-white px-2 py-1 md:px-3 md:py-2  rounded-md shadow-md"
+            className="col-span-1 row-span-1 bg-blue-500 text-white px-2 py-1 md:px-3 md:py-2  rounded-md shadow-md"
             onClick={handleReset}
           >
             reset

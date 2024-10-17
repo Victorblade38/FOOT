@@ -57,7 +57,7 @@ const Todo = ({ color = "blue" }) => {
           onChange={(e) => setTodo(e.target.value)}
         />
         <button
-          className="bg-red-500 py-1 md:px-4 text-white md:font-semibold rounded-md md:rounded-e-md shadow-md"
+          className="bg-blue-500 py-1 md:px-4 text-white md:font-semibold rounded-md md:rounded-e-md shadow-md"
           onClick={addTodo}
         >
           Submit
