@@ -7,9 +7,9 @@ function App() {
   const [color, setColor] = useState("gray"); // Color state
   return (
     <div
-      className={`h-screen w-screen overflow-none flex justify-center items-center bg-${color}-700 lg:bg-gray-700`}
+      className={`h-screen w-screen overflow-none flex justify-center items-center bg-${color}-700 `}
     >
-      <div className="gap-2 md:gap-4 overflow-none flex flex-col md:flex-row justify-center items-center bg-${color}-100 p-4 md:p-0">
+      <div className="gap-2 md:gap-4 overflow-none flex flex-col md:flex-row justify-center items-center  p-4 md:p-0">
         <div className={`flex flex-col w-1/2 items-center gap-2 md:p-6`}>
           <div
             className={`flex flex-row justify-between p-4 gap-2 rounded-md font-sans`}
