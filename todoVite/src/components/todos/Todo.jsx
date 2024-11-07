@@ -3,7 +3,7 @@ import img from "../../assets/dustbin.png";
 
 const Todo = ({ color = "blue" }) => {
   const [todo, setTodo] = useState(""); // New to-do input
-  const maxTodos = 6; // Set the maximum number of to-dos allowed
+  const maxTodos = 10; // Set the maximum number of to-dos allowed
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem("todos");
     console.log("Initial load from localStorage:", savedTodos); // Debugging log
@@ -46,32 +46,32 @@ const Todo = ({ color = "blue" }) => {
 
   return (
     <div
-      className={`col-span-2 row-span-2 bg-${color}-100 px-20 py-10 rounded-md flex flex-col gap-4 transition ease-in duration-300 font-serif`}
+      className={`col-span-2 row-span-2 md:bg-${color}-100 lg:px-20 lg:py-10 rounded-md flex flex-col gap-4 transition ease-in duration-300 font-serif`}
     >
-      <div className="flex flex-col md:flex-row md:gap-0 gap-2">
+      <div className="flex flex-row md:gap-1 gap-2">
         <input
           type="text"
           value={todo}
-          className="col-span-2 w-full px-4 py-3 rounded-md md:rounded-s-md shadow-md focus:border-none focus:outline-none"
+          className="col-span-2 w-60 md:w-70 text-sm md:text-base lg:text-xl px-4 py-3 rounded-md md:rounded-s-md shadow-sm md:shadow-md focus:border-none focus:outline-none"
           placeholder="Enter your to-do"
           onChange={(e) => setTodo(e.target.value)}
         />
         <button
-          className="bg-blue-500 py-1 md:px-4 text-white md:font-semibold rounded-md md:rounded-e-md shadow-md"
+          className="bg-blue-500 active:bg-blue-700 py-1 px-2 md:px-4 text-white md:font-semibold rounded-md md:rounded-e-md shadow-sm md:shadow-md"
           onClick={addTodo}
         >
-          Submit
+          Add
         </button>
       </div>
 
-      <ul className="flex flex-col items-center gap-2">
+      <ul className="h-[100px] md:h-[400px] overflow-y-scroll no-scrollbar  flex flex-col items-center gap-2">
         {todos.map((todoItem, index) => (
           <li
             key={index}
-            className="flex flex-row justify-between bg-gray-50 p-3 md:p-4 gap-2 w-full shadow-md rounded-md"
+            className="flex flex-row justify-between bg-gray-50 p-3 md:p-4 gap-2 w-full shadow-sm md:shadow-md rounded-md"
           >
             <p
-              className={`font-serif text:md md:text-md w-full ${
+              className={`font-serif text-sm md:text-md w-full ${
                 todoItem.isCompleted ? "line-through text-slate-700" : ""
               }`}
             >
