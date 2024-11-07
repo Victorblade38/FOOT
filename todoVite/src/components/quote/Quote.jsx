@@ -8,7 +8,7 @@ const Quote = ({ color = "blue" }) => {
   const [rotateClass, setRotateClass] = useState("");
 
   async function quoteData() {
-    const url = import.meta.env.VITE_QUOTE_API_KEY;
+    const url = "http://api.quotable.io/random";
     try {
       const response = await fetch(url);
       if (!response.ok) {
