@@ -16,31 +16,31 @@ function App() {
           >
             <span
               className={`bg-gray-700 w-8 h-8 rounded-full
-            ${color !== "gray" ? "shadow-md " : "border-2 border-slate-800"}
+            ${color !== "gray" ? "shadow-md " : "border-2 border-white"}
              transition ease-in duration-300 cursor-pointer `}
               onClick={() => setColor("gray")}
             ></span>
             <span
               className={`bg-orange-700 w-8 h-8 rounded-full 
-            ${color !== "orange" ? "shadow-md " : "border-2 border-slate-800"}
+            ${color !== "orange" ? "shadow-md " : "border-2 border-white"}
              transition ease-in duration-300 cursor-pointer`}
               onClick={() => setColor("orange")}
             ></span>
             <span
               className={`bg-red-700 w-8 h-8 rounded-full 
-            ${color !== "red" ? "shadow-md " : "border-2 border-slate-800"}
+            ${color !== "red" ? "shadow-md " : "border-2 border-white"}
              transition ease-in duration-300 cursor-pointer`}
               onClick={() => setColor("red")}
             ></span>
             <span
               className={`bg-green-700 w-8 h-8 rounded-full 
-            ${color !== "green" ? "shadow-md " : "border-2 border-slate-800"}
+            ${color !== "green" ? "shadow-md " : "border-2 border-white"}
              transition ease-in duration-300 cursor-pointer`}
               onClick={() => setColor("green")}
             ></span>
             <span
               className={`bg-purple-700 w-8 h-8 rounded-full 
-            ${color !== "purple" ? "shadow-md " : "border-2 border-slate-800"}
+            ${color !== "purple" ? "shadow-md " : "border-2 border-white"}
              transition ease-in duration-300 cursor-pointer`}
               onClick={() => setColor("purple")}
             ></span>
