@@ -40,7 +40,7 @@ function App() {
             ></span>
             <span
               className={`bg-purple-700 w-8 h-8 rounded-full 
-            ${color !== "blue" ? "shadow-md " : "border-2 border-slate-800"}
+            ${color !== "purple" ? "shadow-md " : "border-2 border-slate-800"}
              transition ease-in duration-300 cursor-pointer`}
               onClick={() => setColor("purple")}
             ></span>
