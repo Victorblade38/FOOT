@@ -7,33 +7,23 @@ const Quote = ({ color = "blue" }) => {
   const [quote, setQuote] = useState({});
   const [rotateClass, setRotateClass] = useState("");
 
-  // async function quoteData() {
-  //   //const url = "https://api.quotable.io/random";
-  //   //console.log(url);
-  //   try {
-  //     const response = await fetch("http://api.quotable.io/random");
-  //     if (!response.ok) {
-  //       throw new Error(`Response status: ${response.status}`);
-  //     }
-  //     const json = await response.json();
-  //     setQuote(json);
-  //     //console.log(json);
-  //   } catch (error) {
-  //     console.error(error.message);
-  //   }
-  // }
-  // useEffect(() => {
-  //   quoteData();
-  // }, []);
-
+  async function quoteData() {
+    const url = import.meta.env.VITE_QUOTE_API_KEY;
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+      const json = await response.json();
+      setQuote(json);
+      //console.log(json);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
   useEffect(() => {
-    updateQuote();
+    quoteData();
   }, []);
-
-  const updateQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotesArray.length);
-    setQuote(quotesArray[randomIndex]);
-  };
 
   const refresh = () => {
     console.log("Refreshing...");
@@ -41,7 +31,7 @@ const Quote = ({ color = "blue" }) => {
     setTimeout(() => {
       setRotateClass("");
     }, 200);
-    updateQuote();
+    quoteData();
   };
 
   return (
