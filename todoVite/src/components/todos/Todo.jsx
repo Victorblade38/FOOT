@@ -52,7 +52,7 @@ const Todo = ({ color = "blue" }) => {
         <input
           type="text"
           value={todo}
-          className="col-span-2 w-60 md:w-70 text-sm md:text-base lg:text-xl px-4 py-3 rounded-md md:rounded-s-md shadow-sm md:shadow-md focus:border-none focus:outline-none"
+          className="col-span-2 w-60 md:w-70 text-sm md:text-base lg:text-base px-4 py-3 rounded-md md:rounded-s-md shadow-sm md:shadow-md focus:border-none focus:outline-none"
           placeholder="Enter your to-do"
           onChange={(e) => setTodo(e.target.value)}
         />
@@ -60,7 +60,7 @@ const Todo = ({ color = "blue" }) => {
           className="bg-blue-500 active:bg-blue-700 py-1 px-2 md:px-4 text-white md:font-semibold rounded-md md:rounded-e-md shadow-sm md:shadow-md"
           onClick={addTodo}
         >
-          Add
+          add
         </button>
       </div>
 
@@ -71,7 +71,7 @@ const Todo = ({ color = "blue" }) => {
             className="flex flex-row justify-between bg-gray-50 p-3 md:p-4 gap-2 w-full shadow-sm md:shadow-md rounded-md"
           >
             <p
-              className={`font-serif text-sm md:text-md w-full ${
+              className={`font-serif text-sm md:text-md  w-full ${
                 todoItem.isCompleted ? "line-through text-slate-700" : ""
               }`}
             >

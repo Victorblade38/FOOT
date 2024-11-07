@@ -50,7 +50,7 @@ const Quote = () => {
         -- {quote.author}
         <button
           onClick={refresh}
-          className="bg-blue-500 p-[6px] md:p-2 rounded-md"
+          className="bg-blue-500 p-[6px] md:p-2 rounded-md hidden md:flex"
         >
           <img
             src={reload}
