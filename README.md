@@ -1,6 +1,6 @@
-# To-Do App
+# FOOT - Focus only on today
 
-This To-Do App is a feature-rich task management tool built with React, Vite, JavaScript, and Tailwind CSS. It allows users to efficiently manage their tasks while incorporating additional functionalities to enhance the user experience. 
+Your ultimate productivity companion. Stay on track with Focus Mode, power through tasks with a built-in timer, and get smart suggestions while planning your day. Stop procrastinating and start achieving!
 
 ## Features
 - **To-Do Component**: Users can easily add, edit, and remove tasks, helping them stay organized and on track.
