@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Light Mode */
+  --background-color: #e0e5eb;
+  --foreground-color: #ffffff;
+  --border-color: #b0b2b7;
+  --primary-text-color: #0a0f15;
+  --secondary-text-color: #585858;
+  --primary-button-color: #9747ff;
+  --secondary-button-color: #c08fff;
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --background-color: #0a0f15;
+  --foreground-color: #222631;
+  --border-color: #383f4f;
+  --primary-text-color: #f1f2f2;
+  --secondary-text-color: #e0e5eb;
+}
+
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
