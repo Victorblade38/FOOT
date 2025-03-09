@@ -4,7 +4,7 @@ import { AuthProvider } from "../context/AuthContext";
 
 const Layout = () => {
   return (
-    <div className=" bg-background w-screen h-screen  flex justify-center items-start ">
+    <div className="bg-background w-screen h-screen  flex justify-center items-center">
       <div className="">
         <AuthProvider>
           <Outlet />

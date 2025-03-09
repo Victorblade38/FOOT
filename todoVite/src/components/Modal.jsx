@@ -39,7 +39,7 @@ const Modal = ({ isOpen, Close }) => {
       aria-labelledby="add-task-title"
       aria-modal="true"
     >
-      <div className="w-full lg:w-96 flex flex-col gap-4 bg-foreground rounded-8  p-6 ">
+      <div className="w-full max-w-96 flex flex-col gap-4 bg-foreground rounded-8  p-6 ">
         <div className="flex justify-end">
           <button
             type="button"

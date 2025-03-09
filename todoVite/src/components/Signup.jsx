@@ -28,7 +28,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="w-72 bg-foreground p-8 rounded-8">
+    <div className="w-72 mt-4 lg:mt:10 bg-foreground p-8 rounded-8">
       <h2 className="text-center mb-4 font-semibold text-lg">Sign Up</h2>
 
       {error && <p>{error}</p>}

@@ -28,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-72 bg-foreground p-8 rounded-8">
+    <div className=" w-72 bg-foreground p-8 rounded-8">
       <h2 className="text-center mb-4 font-semibold text-lg">Log In</h2>
 
       {error && <p>{error}</p>}
